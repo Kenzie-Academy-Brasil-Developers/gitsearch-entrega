@@ -1,0 +1,106 @@
+section,
+button{
+    background-color: var(--color-brand-1);
+}
+
+aside{
+    background-color: var(--color-grey-2);
+}
+
+section,
+aside,
+form>input{
+    color: var(--color-grey-7);
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+h1{
+    font-weight: var(--font-weight-600);
+    font-size: var(--font-tittle);
+}
+
+section>div{
+    display: flex;
+    flex-direction: column;
+    gap: 2.313rem;
+}
+
+section>div>p{
+    font-size: var(--font-subtittle);
+    font-weight: var(--font-weight-400);
+
+    max-width: 430px;
+    width: 100%;
+}
+
+section>div,
+aside>div{
+    padding: 2.5rem 0;
+}
+
+aside>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    
+    max-width: 315px;
+    width: 100%;
+}
+form>input{
+    background-color: var(--color-grey-1);
+    font-weight: var(--font-weight-400);
+}
+form>input::placeholder{
+    color: var(--color-placeholder);
+}
+
+form>button{
+    height: 2.375rem;
+    color: var(--color-grey-7);
+    border: none;
+    font-weight: var(--font-weight-500);
+    cursor: pointer;
+}
+
+form>input,
+form>button{
+    padding: 0.5rem 0.813rem;
+    font-size: var(--font-inputs);
+}
+
+@media(min-width: 1024px){
+    main{
+        display: flex;
+    }
+    section,
+    aside{
+        width: 50vw;
+        height: 100vh;
+
+    }
+    section>div,
+    aside>div{
+        justify-content: center;
+        padding: 7.5rem 0;
+    }
+    section>.container,
+    aside>.container{
+        height: 100vh;
+    }
+
+    section>.container{
+        margin-left: 120px;
+    }
+    section>h1,
+    section>p{
+        margin-right: 50px;
+    }
+}

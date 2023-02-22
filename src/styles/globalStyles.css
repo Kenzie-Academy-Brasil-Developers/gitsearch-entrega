@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 :root {
   --color-brand-1: #c2255c;
   --color-brand-2: #d6336c;
@@ -8,5 +10,38 @@
   --color-grey-6: #a6a8a9;
   --color-grey-7: #ffffff;
   --color-alert: #c22554;
+  --color-placeholder: rgba(255, 255, 255, 0.5);
   --font-primary: "Inter", sans-serif;
+
+  --font-weight-400: 400;
+  --font-weight-500: 500;
+  --font-weight-600: 600;
+  --font-weight-700: 700;
+
+  --font-subtittle: 1.25rem;
+  --font-tittle: 2rem;
+  --font-inputs: 0.875rem;
+  --font-name: 1.5rem;
+  --font-error: 2.375rem;
+  --font-error-details: 1rem;
+  --font-error-search: 1.125rem;
+
+}
+
+.container{
+  max-width: 900px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+body{
+  font-family: var(--font-primary);
+  letter-spacing: 0.063rem;
+  background-color: var(--color-grey-2);
+}
+
+button{
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
