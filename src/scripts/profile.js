@@ -33,7 +33,6 @@ export async function renderListRepo() {
     .then(function(responseJson){
 
     responseJson.map(repository => {
-        console.log(repository)
         createListProfile(repository)
     })
 

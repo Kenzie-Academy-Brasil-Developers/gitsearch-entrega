@@ -1,4 +1,4 @@
-import { renderUserProfile,renderListRepo } from "./profile.js";
+
 
 export const baseUrl = 'https://api.github.com/users/'
 
@@ -13,11 +13,12 @@ async function searchUser(user) {
 
     .then((response)=>{
         if (response.ok) {
-            response.json().then(responseJson =>{
+            const userSearch = response.json().then(responseJson =>{
                 localStorage.setItem('user', JSON.stringify(responseJson))
+                return responseJson
             })
             window.location.replace('./src/pages/profile.html')
-            return response.json()
+            return userSearch
         }else{
             window.location.replace('./src/pages/error.html')
         }
@@ -33,8 +34,16 @@ export async function searchUserByName() {
 
     button.addEventListener('click', async (event)=>{
         event.preventDefault()
-
         const user = await searchUser(input.value)
+
+        // .then((response)=>{
+        //     return response.json()
+        // }) 
+        // .catch(err => {
+        //     alert('erro');
+        //     console.log(err);
+        //   })
+        return user
     })
 }
 
