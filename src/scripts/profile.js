@@ -73,7 +73,7 @@ async function changeUser() {
     if (button) {
         button.addEventListener('click', ()=>{
             window.location.replace('/index.html')
-            // returnToIndex()
+            localStorage.clear()
         })
     }else{
         console.log("button nao existe")
