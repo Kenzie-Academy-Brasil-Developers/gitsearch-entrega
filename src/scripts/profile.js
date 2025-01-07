@@ -71,7 +71,7 @@ async function changeUser() {
 
     if (button) {
         button.addEventListener('click', ()=>{
-            window.location.replace('/index.html')
+            window.location.replace('/')
             localStorage.clear()
         })
     }else{
