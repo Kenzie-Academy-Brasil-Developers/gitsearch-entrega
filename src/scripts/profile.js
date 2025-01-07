@@ -27,11 +27,10 @@ export async function renderListRepo() {
             'Content-Type':'application/json'
         } 
     })
-
-    .then(function(response){ return response.json()})
+    
+    .then(function(response){return response.json()})
 
     .then(function(responseJson){
-
     responseJson.map(repository => {
         createListProfile(repository)
     })
@@ -61,7 +60,12 @@ export async function createListProfile(repository) {
 export async function renderUserProfile() {
     
     const user = JSON.parse(localStorage.getItem('user'))
-    createHeaderProfile(user)
+    console.log(user.name)
+    if(user.name == null){
+        window.location.replace('./error.html')
+    }else{
+        createHeaderProfile(user)
+    }
 }
 
 
