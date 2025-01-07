@@ -71,7 +71,7 @@ async function changeUser() {
 
     if (button) {
         button.addEventListener('click', ()=>{
-            window.location.replace('/')
+            window.location.replace('/gitsearch-entrega/')
             localStorage.clear()
         })
     }else{
