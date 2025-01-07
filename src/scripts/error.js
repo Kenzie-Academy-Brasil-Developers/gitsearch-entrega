@@ -2,7 +2,7 @@ function returnToIndex() {
     const button = document.querySelector('button')
 
     button.addEventListener('click', ()=>{
-        window.location.replace('/gitsearch-entrega/')
+        window.location.replace('../../')
     })
 }
 
